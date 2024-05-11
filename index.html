@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everyday Git</title>
+  <link rel="icon" href="./Assets/gitlogo.png">
+</head>
+<body>
+  <div>
+    <h2> &#8594; Everyday Git</h2>
+    <p> <b>Learn with us: </b>Eat-The-Frog Manenozz BLog. <b>Date</b> 10<sup>th</sup>May 2024</p>
+    <h3> &#8594; What is git?</h3>
+    <p>Git is a version control system.A version control system is a software tool that helps to track and manage changes to files, code, documents, and any other types of digital content over time.In software engineering, git helps us to keep track of changes to code. Git is also used to collaborate in code by several software engineers.
+    <br>
+    <h4>While Git is the focus of this blog, there are other version control systems worth mentioning:</h4>
+    
+    <ol>
+      <li><b>Subversion (SVN):</b> SVN is a centralized version control system that predates Git. It's known for its simplicity and ease of use.</li>
+      <li> <b>Mercurial (Hg):</b> Like Git, Mercurial is a distributed version control system. It shares many similarities with Git but has a different underlying architecture. Mercurial is known for its simplicity and intuitive interface.</li>
+      <li> <b>Microsoft Team Foundation Version Control (TFVC): </b> TFVC is a centralized version control system developed by Microsoft as part of the Azure DevOps suite. It integrates seamlessly with other Microsoft tools and services.</li>
+    </ol>
+    <br>
+    However, in this blog, we'll delve deeper into Git and its integration with GitHub, a platform for hosting Git repositories and collaborating on projects. Git and GitHub together form a powerful combination that has revolutionized the way software development is done, enabling teams to work together more efficiently and effectively.
+    </p>
+  </div>
+  <br><br>
+  <div>
+    <h3> &#8594; Installing Git</h3>
+    <h4>Checking if Git is Installed:</h4>
+    <p>You can check if Git is installed on your machine by opening a terminal (Command Prompt on Windows, Terminal on macOS and Linux) and type the command <b>git --version</b> </p>
+    <img width="1000px" src="./Assets/gitVersion.png" alt="An image illustrating the check command for installed git">
+    <p>If you have git installed, you should see something like: git version x.y</p>
+    <p>If not, then you will see an error message that the command is not recognized</p>
+
+    <h4>Installing Git from web.</h4>
+    <p>If you don’t have git installed, <a target="_blank" href="https://www.git-scm.com/">click here to download git from git official website</a></p>
+    <img width="1000px" src="./Assets/gitWebsite.png" alt="Git donload webpage">
+  </div>
+
+  <div>
+    <h3> &#8594; Configuring Git</h3>
+    <ul>
+      <li>After installing git. Open the terminal</li>
+      <li>Configure User Name. Set your Git username using the following command <br>
+      <b>git config --global user.name "Your Name"
+      </b></li>
+      <li> Configure Email Address. Set your Git email address using the following command<br>
+      <b>git config --global user.email "your_email@example.com"</b></li>
+      <li>Verify Configuration. To verify that you've configured Git correctly, you can use the following commands to display your configured username and email. <br>
+      <b>git config --global user.name</b> - displays the name<br>
+      <b>git config --global user.email</b> - displays the email<br>
+      <b>git config --global --list</b> - displays both the name and email
+      </li>
+    </ul>
+    <p>In our example below we configured our git name to <b>Gakiri001</b> and email <b>gakirijulius@gmail.com</b></p>
+    <img width="1000px" src="./Assets/gitconfigure.png" alt="An image shpwing the git configuartion at the terminal">
+  </div>
+
+  <div>
+    <h3> &#8594; Intializing a Git repository </h3>
+    <p>A <b>git repository</b> is a storage location where GIT version control system manages and stores project’s files and revision history.</p>
+    <ul>
+      <li>To check if the project contains a git repository, run the command <b>git status,</b> if the project does not contain a git repository, you will get the message <strong>“fatal not a git repository…”</strong></li>
+      <li>If the project/folder does not contain a git repository, you can initialize/create a repository using the command <b>git init</b>, if a repository is initialized successfully, you will see the text <b>“Initialized an empty git repository in…”</b></li>
+    </ul>
+    <p>In the example below, I opened my terminal from the <b>WorlsCities folder</b> in my local machine and Intialized</p>
+    <img width="1000px" src="./Assets/gitInitilization.png" alt="Git inilization terminal picture">
+  </div>
+
+  <div>
+    <h3> &#8594; Adding files to the staging area</h3>
+    <p>Use the command <b>git status</b> to verify that the file is part of the repo. <br>
+      You will see your file under untracked files.</p>
+    <p>Files in your github repository can be in one of the two states: <b>tracked</b> or <b>untracked.</b> <br>
+      <b>Tracked files: </b>are files that git know about and are added to the repository. <br>
+      <b>Untracked files: </b>These files are in our working directory and git knows about them but have not been added to the repository.</p>
+      <p>In the example below, we create a new files called <b>Africa.txt</b> and <b>Europe.txt</b>. And check if they are part of the <b>World cities</b> repository by using git status. We see that <b>Africa.txt</b> and <b>Europe.txt</b> are untracked.</p>
+      <img width="1000px" src="./Assets/gitstatus.png" alt="Picture showing the file either tracked or untracked">
+
+      <h4>Git Staging Environment</h4>
+      <ul>
+        <li>A staging area is an area where changes to files are prepared before they are committed to repository</li>
+        <li>To add a file to the staging environment, use <b>git add filename.</b></li>
+        <li>You can also use <b> git add . </b> to add all the files.</li>
+      </ul>
+      <p>In my example below, I used <b>git add .</b> to add my text files <b>Africa.txt</b> and <b>Europe.txt</b> to the staging area</p>
+      <img width="1000px" src="./Assets/gitAdd.png" alt="picture of adding files to git repository">
+  </div>
+
+  <div>
+    <h3> &#8594; Commiting changes</h3>
+    <ul>
+      <li>A commit in git is a snapshot of changes made to a repository at a particular point in time.Adding commits keeps track of our progress and changes as we work.</li>
+      <li>We use <b>git commit –m “commit message”</b> to commit changes to our repository.</li>
+      <li>If we want we can view past commits using the <b>git log command.</b></li>
+      <li>We can use <b>git log --oneline</b> if we want a bit more compressed output of git log.</li>
+    </ul>
+    <p>In the example below, I commited the message <em>'create africa and europe files'</em> and checked the log status afterwards</p>
+    <img width="1000px" src="./Assets/gitcommit.png" alt="picture for commit message fot git in the terminal">
+    <img width="1000px" src="./Assets/git log.png" alt="git commit log info">
+  </div>
+
+  <div>
+    <h3> &#8594; Branches</h3>
+    <p>A branch is a new/separate version of the main repository.Branches allow multiple developers to work on different features, bug fixes, or experiments simultaneously without interfering with each other’s work</p>
+    <h4>Functions of branch</h4>
+    <ol>
+      <li><b> Isolation of Work:</b> Each branch represents a specific task, feature, or bug fix, allowing developers to work on them independently without interfering with other ongoing work</li>
+      <li><b>Parallel Development:</b> Branches enable parallel development by allowing multiple developers to work on different features or tasks simultaneously.</li>
+      <li><b>Experimentation and Testing:</b> Developers can use branches to experiment with new ideas or approaches without affecting the stability of the main codebase. If an experiment is successful, the changes can be merged into the main codebase.</li>
+      <li><b>Collaboration:</b>  Developers can share their branches with others, review each other's code, and collaborate on features or fixes before merging them into the main codebase.</li>
+    </ol>
+  </div>
+
+  <div>
+    <h3> &#8594; Creating a Branches</h3>
+    <p>To create branch, we use the command <b> git branch new-branch-name.</b></p>
+    <p>In the example below, I create a branch called <b>Earth-Cities</b></p>
+    <img width="1000px" src="./Assets/gitNewbranch.png" alt="Picture illustrating how to git branch using the terminal">
+  </div>
+
+  <div>
+    <h3> &#8594; Viewing all branches</h3>
+    <ul>
+      <li>We can view all the branches, using the command <b>git branch</b></li>
+      <li>The branch with a * symbol to its left is the active branch/the branch we are in.</li>
+    </ul>
+    <p>In the example below, Used <b>git branch</b> to view my Branches in the terminal</p>
+    <img width="1000px" src="./Assets/gitBranchView.png" alt="to view git Branches in the terminal">
+  </div>
+
+  <div>
+    <h3> &#8594; Switching active branches</h3>
+    <p>we can change branches using the command <b>git checkout branch-name</b></p>
+    <p>In the example we switched to branch <b>Earth-Cities</b> from the master <em>(World Cities)</em></p>
+    <img width="1000px" src="./Assets/gitCheckout.png" alt="picture illustrates we switched to branch Earth-Cities from the master (World Cities)">
+  </div>
+
+  <div>
+    <h3> &#8594; Merging a branch</h3>
+    <ul>
+      <li>Move to your the branch you want to merge this branch with. <em>In our case the master branch</em> </li>
+      <li>We then use the command <b>git merge branch-name</b> to merge that branch.</li>
+    </ul>
+    <p>In the example, i merged the branch <em>Earth-Cities</em> to main branch <em>WorlsCities</em> </p>
+    <img width="1000px" src="./Assets/gitmerge.png" alt="Picture illustrates merging the branch 'Earth-Cities' to main branch (WorlsCities)">
+  </div>
+
+  <div>
+    <h3> &#8594; Deleting a branch</h3>
+    <ul>
+      <li>we can then delete that branch using the command <b>git branch –d branch-name</b></li>
+    </ul>
+    <p>In the example below, I deleted the branch  <em>Earth-Cities</em></p>
+
+    <img width="1000px" src="./Assets/gitdelete.png" alt="Picture illustrates deleting the branch Earth-Cities">
+  </div>
+
+  <div>
+    <h3> &#8594; Next steps</h3>
+    <h4>Next Tool - GitHub:</h4>
+    <p>GitHub is a popular platform for hosting Git repositories and collaborating on projects. <br> Here's how it works and what users can do next:</p>
+    <ul>
+      <li> <b>Create a GitHub Account: </b>If you don't have one already, sign up for a GitHub account at <a target="_blank" href="https://github.com/">github.com.</a></li>
+      <li> <b>Creating Repositories:</b> Learn how to create a new repository on GitHub to host your projects.</li>
+      <li><b>Pushing to GitHub: </b>Once you have a repository set up locally, push your changes to GitHub to make them accessible to others.</li>
+      <li> <b>Collaborating with Others:  </b>Explore GitHub's collaboration features, such as pull requests, issues, and project boards, to work with teammates on projects.</li>
+      <li> <b>Exploring Open Source Projects: </b> Browse GitHub to discover open-source projects, contribute to them, or fork them to start your own version.</li>
+    </ul>
+    <p>Github Home page</p>
+    <img width="1000px" src="./Assets/githubHomepage.png" alt="Github Home page">
+  </div>
+</body>
+</html>
